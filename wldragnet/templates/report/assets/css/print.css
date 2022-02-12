@@ -1,0 +1,53 @@
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        /* Chrome, Safari */
+        color-adjust: exact !important;
+        /*Firefox*/
+    }
+    @page {
+        size: 210mm 297mm;
+        /* this affects the margin in the printer settings */
+        margin: 6.35mm;
+    }
+    body {
+        font-size: 16px;
+    }
+    .header-space {
+        margin: 9mm 9mm 5mm 9mm;
+    }
+    table.result-page {
+        page-break-after: always;
+    }
+    table.result-page .content {
+        margin: 0 9mm 0;
+    }
+    .custom-table tbody tr td {
+        background: none !important;
+    }
+    .custom-table thead tr th {
+        background: #6516bc !important;
+    }
+    .custom-table tbody th,
+    .custom-table tbody td,
+    .custom-table tbody tr:not(.spacer) {
+        border: 1px solid #c793ff !important;
+    }
+    .custom-table thead tr,
+    .custom-table thead th {
+        border: 1px solid #6516bc !important;
+    }
+    table.custom-table,
+    table.custom-table tbody,
+    table.custom-table tbody tr,
+    table.custom-table tbody tr td,
+    #footerContent,
+    .footer-logos {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin: 4px 0 4px 0;
+    }
+    table.custom-table tbody tr td {
+        white-space: nowrap; 
+    }
+}

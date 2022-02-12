@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  redis:
+    container_name: wldragnet_redis
+    image: "redis:alpine"
+
+  postgres:
+    container_name: wldragnet_postgres
+    image: postgres:13.5
+    restart: always
+    environment:
+      # These weak credentials are for local testing and should be changed in other scenarios.
+      - PGUSER=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '127.0.0.1:5438:5432'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./wldragnet/schema.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  flask:
+    container_name: wldragnet_flask
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: on-failure
+    environment:
+      - FLASK_APP=wldragnet
+      - FLASK_ENV=development
+      - DOCUMENT_PATH=/documents/HTML
+      - DOCUMENT_GLOB_PATTERN=**/*.html
+      - SCAN_PROCESS_POOL_SIZE_MAX=4
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PW=postgres
+      - DB_POOL_SIZE_MIN=4
+      - DB_POOL_SIZE_MAX=4
+      - JWT_SECRET_KEY=MyVerySecretKey
+      - JWT_TOKEN_LIFETIME=600
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./documents:/documents

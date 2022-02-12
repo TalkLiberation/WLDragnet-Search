@@ -1,0 +1,346 @@
+/* 
+---------------------------------------------
+overrides
+--------------------------------------------- 
+*/
+
+html,
+body {
+    background: #000;
+}
+
+.header-area .main-nav a.logo {
+    background-image: url(../images/tl-white-logo.png);
+    width: 281px;
+}
+
+.background-header .main-nav a.logo {
+    background-image: url(../images/tl-coloured-logo.png);
+}
+
+.header-area {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.main-banner {
+    background-position: top right;
+    padding: 0 0 100px 0;
+}
+
+.main-banner .top-text h2 {
+    margin-bottom: 15px;
+}
+
+.main-banner .top-text h6 {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    text-transform: none;
+}
+
+.main-banner .search-box {
+    padding: 40px 0;
+    position: relative;
+    border-image: linear-gradient(45deg, #00c0ef, #6516bc) 1;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.main-banner .generate {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.main-banner .generate .search-pending p,
+.main-banner .generate .search-complete p {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.main-banner .generate .search-complete p strong {
+    background-color: #7e11c1
+}
+
+form#search-form input.searchText {
+    font-size: 18px;
+    border: 0;
+    padding: 0px 10px;
+}
+
+form#search-form input.searchText {
+    font-size: 18px;
+}
+
+form#search-form input.searchText::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
+form#search-form input.searchText::-moz-placeholder {
+    font-size: 18px;
+}
+
+form#search-form button {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #247db6;
+    transition: all .3s;
+}
+
+form#search-form button:hover {
+    background-color: #00ade2;
+}
+
+button.download-report {
+    border: 0;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #247db6;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 7px;
+    letter-spacing: 0.25px;
+    transition: all .3s;
+}
+
+button.download-report:hover {
+    background-color: #00ade2;
+}
+
+button.download-report svg.iconify {
+    padding: 3px;
+    background-color: #fff;
+    color: #8d99af;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.main-banner .support {
+    margin-top: 40px;
+}
+
+.main-banner .support p {
+    font-size: 16px;
+    color: #a57bdf;
+}
+
+.main-banner .support a {
+    color: #06bbf5;
+    font-weight: 500;
+}
+
+.main-banner .support a:hover {
+    text-decoration: underline !important;
+}
+
+/* Frequently asked questions (FAQ) */
+span.faq {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* Social Media Buttons */
+
+.main-nav .social-media {
+    float: right;
+    margin-top: 32px;
+}
+
+.social-media ul.social-buttons li {
+    display: inline-block;
+}
+
+.main-nav .social-media ul.social-buttons li a,
+footer .social-media ul.social-buttons li a {
+    background-color: transparent;
+    color: #00ade2;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .3s;
+    border: 1px solid #00ade2;
+}
+
+.main-nav .social-media ul.social-buttons li a {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+footer .social-media ul.social-buttons li a {
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.social-media ul.social-buttons li a:hover {
+    background-color: #00ade2;
+    color: #b9e4ff;
+}
+
+.main-nav .social-media ul.social-buttons li {
+    margin-left: 8px;
+}
+
+footer .social-media ul.social-buttons li {
+    margin-left: 15px;
+}
+
+footer .social-media ul.social-buttons li:first-child {
+    margin-left: 0;
+}
+
+.main-nav .social-media ul.social-buttons {
+    text-align: right;
+}
+
+footer .social-media ul.social-buttons {
+    margin-bottom: 40px;
+}
+
+form#search-form button svg.iconify {
+    padding: 7px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #8d99af;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 10px;
+}
+
+
+/* Social Media Buttons End */
+
+
+/* Footer */
+
+footer {
+    padding: 80px 0;
+    border-top: 0;
+}
+
+footer p {
+    color: #eee;
+}
+
+footer p a {
+    color: #04bff6;
+    text-decoration: none;
+}
+
+footer p a {
+    color: #04bff6;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #247db6;
+}
+
+footer .panquake {
+    color: #ff9e00;
+    text-decoration: none;
+}
+
+footer .panquake:hover {
+    color: #ff002c;
+    text-decoration: underline;
+}
+
+footer img {
+    max-width: 48px;
+}
+
+footer .small-logo {
+    width: 48px;
+    margin: 0 6px 6px 0;
+    border: none;
+}
+
+
+/* Footer End */
+
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    form#search-form {
+        padding: 0;
+    }
+    .main-banner .search-box {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-banner {
+        background-position: top center;
+    }
+    form#search-form input {
+        text-align: center;
+    }
+    form#search-form {
+        padding: 10px;
+    }
+    .main-banner .search-box {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-area .main-nav a.logo {
+        float: none;
+    }
+    .header-area {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 574px) {
+    .main-banner {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    form#search-form input {
+        border: 1px solid #8d99af;
+        border-radius: 7px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Responsive End */
+
+.main-nav .social-media ul.social-buttons li.text-link a {
+    background-color: transparent;
+    color: #00ade2;
+    display: inline-block;
+    margin-right: 24px;
+    text-align: left;
+    border: none;
+    height: 35px;
+    width: 120px;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.main-nav .social-media ul.social-buttons li.text-link a:hover {
+    color: #aae3ff;
+}

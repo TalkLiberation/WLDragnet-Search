@@ -1,0 +1,24 @@
+<form id="search-form" name="gs" method="submit" role="search" action="/result">
+    <div class="row">
+        <div class="col-lg-6 align-self-center">
+            <fieldset>
+                <input
+                        type="text"
+                        name="q"
+                        class="searchText"
+                        placeholder="Enter Your Twitter Handle"
+                        pattern="^[0-9a-zA-Z_]+$"
+                        oninvalid="this.setCustomValidity('Please enter a Twitter username. No special characters.')"
+                        maxlength="16"
+                        spellcheck="false"
+                        required="true"
+                >
+            </fieldset>
+        </div>
+        <div class="col-lg-6">
+            <fieldset>
+                <button class="main-button" title="Search Now"><span class="iconify" data-icon="dashicons:search"></span> Search Now</button>
+            </fieldset>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+{% macro ordered_list_string(list_string) %}
+    {% if list_string is defined and list_string|length > 0 %}
+        <ol>
+            {% set list = list_string.split(',') %}
+            {% for item in list %}
+                <li>
+                    {{ caller(item) }}
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <span>No data found</span>
+    {% endif %}
+{%- endmacro %}

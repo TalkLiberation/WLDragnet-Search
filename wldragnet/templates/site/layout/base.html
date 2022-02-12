@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+        {%  include "site/partials/head.html" %}
+    {% endblock %}
+    {% block stylesheets %}
+        {% include "site/partials/stylesheets.html" %}
+    {% endblock %}
+    <title>WLDragnet Report {% block title required %}{% endblock %} - By Talk Liberation</title>
+</head>
+
+<body>
+
+<div class="main-banner">
+
+    {% block header %}
+        {% include "site/partials/header.html" %}
+    {% endblock %}
+    <div class="container search-box">
+        <div class="row">
+            {% block content required %}
+            {% endblock content %}
+        </div>
+    </div>
+</div>
+
+{% block footer %}
+    {% include "site/partials/footer.html" %}
+{% endblock %}
+{% block scripts %}
+    {% include "site/partials/scripts.html" %}
+{% endblock %}
+
+</body>
+</html>

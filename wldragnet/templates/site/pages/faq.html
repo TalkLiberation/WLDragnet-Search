@@ -1,0 +1,100 @@
+{% extends "site/layout/base.html" %}
+{% block head %}
+    {%  include "site/partials/head-faq.html" %}
+{% endblock %}
+{% block stylesheets %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/mdb.dark.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tl-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tl-overrides.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/accordion.css') }}">
+{% endblock %}
+{% block title %}FAQ{% endblock %}
+{% block header %}
+    {%  include "site/partials/header-faq.html" %}
+{% endblock %}
+{% block content %}
+    <div class="col-lg-12">
+        <div class="top-text header-text">
+            <h2>WLDragnet FAQ</h2>
+            <h6>Frequently Asked Questions</h6>
+        </div>
+    </div>
+    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
+        <div class="accordion" id="accordionFAQ">
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingOne"><button aria-controls="collapseOne" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseOne" data-mdb-toggle="collapse" type="button" style="border-radius:0;">What is WLDragnet?</button></h2>
+                <div aria-labelledby="headingOne" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseOne" style="">
+                    <div class="accordion-body">
+                        WLDragnet is an exclusive investigative series by <a href="https://talkliberation.substack.com/s/talk-liberation-investigates" target="_blank" style="color:#6513A3;" class="keychainify-checked">Talk Liberation Investigates</a>.	WLDragnet revealed widespread monitoring of the social media accounts of activists, journalists, influencers and everyday citizens ho are in support of Julian Assange and WikiLeaks.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingTwo"><button aria-controls="collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseTwo" data-mdb-toggle="collapse" type="button" style="border-radius:0;">What is the WLDragnet Report Search?</button></h2>
+                <div aria-labelledby="headingTwo" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseTwo" style="">
+                    <div class="accordion-body">
+                        WLDragnet Report Search is a tool that allows users to enter a Twitter handle and then download a custom PDF report containing any mentions of that handle in the data sources from the WLDragnet reporting.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingThree"><button aria-controls="collapseThree" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseThree" data-mdb-toggle="collapse" type="button" style="border-radius:0;">Where did the files come from?</button></h2>
+                <div aria-labelledby="headingThree" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseThree" style="">
+                    <div class="accordion-body">
+                        The original source of the files is <a href="https://nodexl.com/" target="_blank" style="color:#6513A3;" class="keychainify-checked">NodeXL</a> - a social media analysis tool maintained by the non-profit <a href="https://smrfoundation.org/" target="_blank" style="color:#6513A3;" class="keychainify-checked">Social Media Research Foundation</a> and utilized by a for-profit consulting company called <a href="https://connectedaction.com/" target="_blank" style="color:#6513A3;" class="keychainify-checked">Connected Action</a>. These organizations regularly use NodeXL to run reputation management reports for a slew of beltway corporations including many US military contractors and weapons manufacturers, as well as the US State Department and NATO.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingFour"><button aria-controls="collapseFour" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseFour" data-mdb-toggle="collapse" type="button" style="border-radius:0;">When were the files published?</button></h2>
+                <div aria-labelledby="headingFour" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseFour" style="">
+                    <div class="accordion-body">
+                        The source files span December 2018 to the present day and were first published by Talk Liberation in October 2021 in a public file
+repository which is <a href="https://talkliberation.com/wldragnet-repo" target="_blank" style="color:#6513A3;" class="keychainify-checked">located here</a>.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingFive"><button aria-controls="collapseFive" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseFive" data-mdb-toggle="collapse" type="button" style="border-radius:0;">Who authored WLDragnet?</button></h2>
+                <div aria-labelledby="headingFive" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseFive" style="">
+                    <div class="accordion-body">
+                        The WLDragnet Investigates series is authored by Sean O'Brien (Chief Security Officer, <a href="https://panquake.com/" target="_blank" style="color:#6513A3;" class="keychainify-checked">Panquake</a>; Founder of Yale University Privacy Lab and Lecturer at Yale Law School) and Suzie Dawson (Founder and Chief Product Officer, <a href="https://panquake.com/" target="_blank" style="color:#6513A3;" class="keychainify-checked">Panquake</a>). The WLDragnet Report Search app is brought to you by the development team building <a href="https://panquake.com/" target="_blank" style="color:#6513A3;" class="keychainify-checked">Panquake</a>, and is administered by Talk Liberation ehf. in Iceland using sustainable geothermal and hydroelectric energy.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingSix"><button aria-controls="collapseSix" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseSix" data-mdb-toggle="collapse" type="button" style="border-radius:0;">How was the WLDragnet material gathered?</button></h2>
+                <div aria-labelledby="headingSix" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseSix" style="">
+                    <div class="accordion-body">
+                        WLDragnet files were obtained via open-source intelligence (OSINT) of graphs available in the public arena, and none of the published information was obtained via leaks, hacking, or data breaches.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item square-border">
+                <h2 class="accordion-header" id="headingSeven"><button aria-controls="collapseSeven" aria-expanded="false" class="accordion-button collapsed" data-mdb-target="#collapseSeven" data-mdb-toggle="collapse" type="button" style="border-radius:0;">Why is this publication significant?</button></h2>
+                <div aria-labelledby="headingSeven" class="accordion-collapse square-border collapse" data-mdb-parent="#accordionFAQ" id="collapseSeven" style="">
+                    <div class="accordion-body">
+                        Though all documents that support our research are publicly-available, their compilation, annotation, and analysis
+comprises an original and noteworthy contribution to public understanding of mass surveillance.<br>
+                        <br>
+                        The documents relate to monitoring, tracking, and reporting measures described by NodeXL principals as intended to enable "detection, deflection, and deterrance" of targeted account holders. Such ideological weaponizing of social media presents a threat to
+democratically-protected speech and actions of a wide variety of people, particularly those identified via their user handle(s) in the NodeXL files, with the obvious capacity to result in real world harm.<br>
+                        <br>
+                        We seek to mitigate that real world harm by empowering the public to discover whether they have been unwittingly pulled into the dragnet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-result">
+        <div class="col-lg-10 offset-lg-1 text-center">
+            {% include "site/partials/support-footer.html" %}
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='vendor/mdb/mdb.min.js') }}"></script>
+{% endblock %}

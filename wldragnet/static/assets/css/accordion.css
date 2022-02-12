@@ -1,0 +1,198 @@
+body {
+	background-color: #000;
+}
+.main-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../images/banner-bg.jpg);
+    padding: 290px 0px 180px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-nav .social-media {
+    float: right;
+    margin-top: 32px;
+}
+
+.social-media ul.social-buttons li {
+    display: inline-block;
+}
+
+.main-nav .social-media ul.social-buttons li a,
+footer .social-media ul.social-buttons li a {
+    background-color: transparent;
+    color: #00ade2;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .3s;
+    border: 1px solid #00ade2;
+}
+
+.main-nav .social-media ul.social-buttons li a {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+footer .social-media ul.social-buttons li a {
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.social-media ul.social-buttons li a:hover {
+    background-color: #00ade2;
+    color: #b9e4ff;
+}
+
+.main-nav .social-media ul.social-buttons li {
+    margin-left: 8px;
+}
+
+footer .social-media ul.social-buttons li {
+    margin-left: 15px;
+}
+
+footer .social-media ul.social-buttons li:first-child {
+    margin-left: 0;
+}
+
+.main-nav .social-media ul.social-buttons {
+    text-align: right;
+}
+
+footer .social-media ul.social-buttons {
+    margin-bottom: 40px;
+}
+
+.header-area .main-nav a.logo {
+    background-image: url(../images/tl-white-logo.png);
+    width: 281px;
+}
+
+.background-header .main-nav a.logo {
+    background-image: url(../images/tl-coloured-logo.png);
+}
+
+.main-nav .social-media ul.social-buttons li.text-link a {
+    background-color: transparent;
+    color: #00ade2;
+    display: inline-block;
+    margin-right: 24px;
+    text-align: left;
+    border: none;
+    height: 35px;
+    width: 120px;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.main-nav .social-media ul.social-buttons li.text-link a:hover {
+    color: #aae3ff;
+}
+
+.header-area {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.main-banner {
+    background-position: top right;
+    padding: 0 0 100px 0;
+}
+
+.main-banner .top-text h2 {
+    margin-bottom: 15px;
+}
+
+.main-banner .top-text h6 {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    text-transform: none;
+}
+
+.collapse-padding{
+	padding: 30px 50px;
+}
+
+.styled-faq .panel-default>.panel-heading {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.styled-faq .panel .panel-collapse .panel-body {
+    border: none;
+}
+
+.styled-faq .panel-group .panel {
+    border-radius: 0;
+    box-shadow: 0 0 0;
+    margin-bottom: 18px;
+}
+
+.styled-faq .panel .panel-heading h4 a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.styled-faq .panel .panel-heading h4 a i.fa {
+    float: right;
+    font-size: 160%;
+    line-height: 16px;
+	display: none;
+}
+
+.styled-faq .panel .panel-heading h4 a[aria-expanded=true] i.fa.fa-angle-down {
+    display: block;
+}
+.styled-faq .panel .panel-heading h4 a[aria-expanded=false] i.fa.fa-angle-up {
+    display: block;
+}
+
+#accordionFAQ.accordion {
+	border: none;
+}
+
+.accordion-item {
+    border-color:#6153a3;
+}
+
+.accordion-item, .accordion-header, .accordion-item.square-border, button.accordion-button, .square-border {
+	border-radius:0;
+}
+
+.accordion-body {
+	color: #333;
+	background-color: #E7E0EB;
+}
+
+.accordion-body a, .accordion-body a:visited {
+	color: #6513A3;
+}
+
+button.accordion-button {
+	background-color: #6153a3;
+}
+
+.accordion-header button.accordion-button{ 
+
+	background-color: #6153a3;
+}
+
+button.accordion-button.collapsed {
+    background-color: #6a339b;
+}
+
+button.accordion-button:hover {
+    background-color: #520f84;
+}

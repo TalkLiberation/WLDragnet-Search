@@ -1,0 +1,145 @@
+body {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    color: #345f95;
+}
+
+strong {
+    font-weight: 600;
+}
+
+@media screen {
+    table.result-page {
+        width: 100%;
+    }
+}
+
+.result-page .content h1 {
+    font-size: 32px;
+    color: #2a2a2a;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.result-page .content h2 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 26px;
+}
+
+.result-page .content h2 a {
+    color: #345f95;
+}
+
+.highlight-handle {
+    color: #ca9701;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#headerContent {
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#footerContent {
+    color: #2a2a2a;
+    font-size: 14px;
+}
+
+#footerContent a {
+    display: inline;
+}
+
+#headerContent span,
+#footerContent span {
+    color: #6516bc;
+}
+
+
+/* Table */
+
+#topTweeters .custom-table {
+    margin-top: 40px;
+}
+
+.custom-table-container table {
+    background-color: transparent !important;
+}
+
+.custom-table {
+    min-width: 900px;
+}
+
+.custom-table ol {
+    margin-bottom: 0;
+}
+
+.custom-table.table>:not(caption)>*>* {
+    padding: 0.8rem 0.8rem;
+}
+
+.custom-table td a,
+.custom-table td span {
+    display: block;
+    font-weight: 500;
+}
+
+.custom-table thead tr,
+.custom-table thead th {
+    border-color: #6516bc;
+    border-top: none;
+    border-bottom: none !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.custom-table tbody {
+    border-top: none !important;
+}
+
+.custom-table tbody th,
+.custom-table tbody td {
+    border-color: #c793ff;
+    color: #000;
+    font-weight: 400;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    font-weight: 300;
+}
+
+.custom-table tbody tr#footerContent,
+.custom-table tbody tr#footerContent td {
+    border-color: transparent !important;
+}
+
+.custom-table thead th {
+    color: #ffffff;
+    background: #6516bc;
+}
+
+.custom-table tbody tr:not(.spacer) {
+    border-color: #c793ff;
+    overflow: hidden;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.custom-table thead {
+    display: table-row-group;
+}
+
+.custom-table .col-rankings {
+    font-size: 18px;
+    width: 25%;
+}
+
+
+/* Table End */
