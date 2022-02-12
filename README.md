@@ -1,5 +1,5 @@
 ![WLDragnet Logo](wldragnet/static/talkliberation-investigates-logo.png) 
-# WLDragnet Search
+# [WLDragnet](https://talkliberation.com/wldragnet) Search
 https://wldragnet.com
 
 This project is brought to you by the team building [Panquake](https://panquake.com) and is an example of the strong ethical design and high-quality standard we bring to the software development process. It is released as Free and Open-Source Software (FOSS) in the interest of the public good.
