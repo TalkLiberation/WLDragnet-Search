@@ -90,7 +90,7 @@ flask run
 
 This project is ethical Free and Open-Source Software (FOSS). Any and all original work contained in this repository that is authored by Talk Liberation is released under the [GNU AGPL version 3](http://www.gnu.org/licenses/agpl-3.0.html) or any later version. See [`LICENSE`](LICENSE) for more information.
 
-For JavaScript licensing information, see the [LibreJS](https://www.gnu.org/software/librejs/) labels in [`weblabels.html`](static/weblabels.html)
+For JavaScript licensing information, see the [LibreJS](https://www.gnu.org/software/librejs/) labels in [`weblabels.html`](wldragnet/static/weblabels.html)
 
 All of the data used to generate WLDragnet Search reports was gathered via technical analysis with freely-available and FOSS tools, and none of the published information was obtained via leaks, hacking, or data breaches.
 
