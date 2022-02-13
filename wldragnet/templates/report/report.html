@@ -67,9 +67,9 @@
                                                     {% set list = entry.influencerhandles.split(',') %}
                                                     {% for item in list %}
                                                         {% if item == query %}
-                                                            <a class="highlight-handle" href="https://twitter.com/{{ item }}">
+                                                            <a class="highlight-handle" href="https://nitter.sethforprivacy.com/{{ item }}">
                                                         {% else %}
-                                                            <a href="https://twitter.com/{{ item }}">
+                                                            <a href="https://nitter.sethforprivacy.com/{{ item }}">
                                                         {% endif %}
                                                         @{{ item }}</a>
                                                     {% endfor %}
@@ -93,7 +93,7 @@
                                                         </td>
                                                         <td>
                                                             {% call(item) ordered_list_string(graph.hashtags) %}
-                                                                <a href="https://twitter.com/hashtag/{{ item }}">
+                                                                <a href="https://nitter.sethforprivacy.com/hashtag/{{ item }}">
                                                                     #{{ item }}
                                                                 </a>
                                                             {% endcall %}
@@ -130,9 +130,9 @@
                                                         <td>
                                                             {% call(item) ordered_list_string(graph.tweetershandles) %}
                                                                 {% if item == query %}
-                                                                    <a class="highlight-handle" href="https://twitter.com/{{ item }}">
+                                                                    <a class="highlight-handle" href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% else %}
-                                                                    <a href="https://twitter.com/{{ item }}">
+                                                                    <a href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% endif %}
                                                                     @{{ item }}
                                                                 </a>
@@ -141,9 +141,9 @@
                                                         <td>
                                                             {% call(item) ordered_list_string(graph.repliedtohandles) %}
                                                                 {% if item == query %}
-                                                                    <a class="highlight-handle" href="https://twitter.com/{{ item }}">
+                                                                    <a class="highlight-handle" href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% else %}
-                                                                    <a href="https://twitter.com/{{ item }}">
+                                                                    <a href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% endif %}
                                                                     @{{ item }}
                                                                 </a>
@@ -152,9 +152,9 @@
                                                         <td>
                                                             {% call(item) ordered_list_string(graph.mentionedhandles) %}
                                                                 {% if item == query %}
-                                                                    <a class="highlight-handle" href="https://twitter.com/{{ item }}">
+                                                                    <a class="highlight-handle" href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% else %}
-                                                                    <a href="https://twitter.com/{{ item }}">
+                                                                    <a href="https://nitter.sethforprivacy.com/{{ item }}">
                                                                 {% endif %}
                                                                     @{{ item }}
                                                                 </a>
