@@ -142,24 +142,63 @@ def transform_result(dict_hits):
     """
     results = {}
     for hit in dict_hits:
-        if hit['file_id'] not in results:
-            results[hit['file_id']] = {}
+        file_id = hit['file_id']
 
-        if 'file_url' not in results[hit['file_id']]:
-            results[hit['file_id']]['file_url'] = hit['file_url']
+        if file_id not in results:
+            results[file_id] = {}
 
-        if 'archive_url' not in results[hit['file_id']]:
-            results[hit['file_id']]['archive_url'] = hit['archive_url']
+        file_result = results[file_id]
 
-        if 'file_description' not in results[hit['file_id']]:
-            results[hit['file_id']]['file_description'] = hit['file_description']
+        if 'file_url' not in file_result:
+            file_result['file_url'] = hit['file_url']
 
-        if 'graphs' not in results[hit['file_id']]:
-            results[hit['file_id']]['graphs'] = []
+        if 'archive_url' not in file_result:
+            file_result['archive_url'] = hit['archive_url']
 
-        if 'influencerhandles' not in results[hit['file_id']] and 'influencerhandles' in hit:
-            results[hit['file_id']]['influencerhandles'] = hit['influencerhandles']
+        if 'file_description' not in file_result:
+            file_result['file_description'] = hit['file_description']
 
-        results[hit['file_id']]['graphs'].append(hit)
+        if 'influencerhandles' not in file_result and 'influencerhandles' in hit:
+            file_result['influencerhandles'] = hit['influencerhandles']
 
-    return list(results.values())
+        if 'graphs' not in file_result:
+            file_result['graphs'] = {}
+
+        graph_id = hit['graph_id']
+        graphs = file_result['graphs']
+
+        if graph_id not in graphs:
+            graphs[graph_id] = {}
+
+        graph = graphs[graph_id]
+
+        if 'mentionedhandles' not in graph and 'mentionedhandles' in hit:
+            graph['mentionedhandles'] = hit['mentionedhandles']
+
+        if 'tweetershandles' not in graph and 'tweetershandles' in hit:
+            graph['tweetershandles'] = hit['tweetershandles']
+
+        if 'repliedtohandles' not in graph and 'repliedtohandles' in hit:
+            graph['repliedtohandles'] = hit['repliedtohandles']
+
+        if 'hashtags' not in graph and 'hashtags' in hit:
+            graph['hashtags'] = hit['hashtags']
+
+        if 'words' not in graph and 'words' in hit:
+            graph['words'] = hit['words']
+
+        if 'graph_name' not in graph and 'graph_name' in hit:
+            graph['graph_name'] = hit['graph_name']
+
+        if 'words' not in graph and 'words' in hit:
+            graph['words'] = hit['words']
+
+        if 'hits' not in graph:
+            graph['hits'] = []
+
+        graph['hits'].append({
+            'rank': hit['rank'],
+            'type': hit['type']
+        })
+
+    return results

@@ -31,8 +31,9 @@
 <div class="mainContent">
     {% block content %}
         <div class="container">
-            {% if results is defined and results|length > 0 %}
-                {% for entry in results %}
+            {% if results is defined %}
+                {% set results_list = results.values() %}
+                {% for entry in results_list %}
                     {% if entry is defined and entry|length > 0 %}
                         <table class="result-page">
                             <thead>
@@ -40,7 +41,7 @@
                                     <td>
                                         <div id="headerContent" class="row justify-content-between header-space">
                                             <div class="col-8 results-number">
-                                                <span>{{ results|length }}</span> results found on <span>@{{ query }}</span>
+                                                <span>{{ results_list|length }}</span> results found on <span>@{{ query }}</span>
                                             </div>
                                             <div class="col-4 text-end report-date">
                                                 Run on <span>{{ timestamp }}</span>
@@ -86,7 +87,8 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                {% for graph in entry.graphs %}
+                                                {% set graphs_list = entry.graphs.values() %}
+                                                {% for graph in graphs_list %}
                                                     <tr>
                                                         <td class="col-rankings">
                                                             <strong>{{ graph.graph_name }}</strong>
@@ -119,13 +121,15 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                {% for graph in entry.graphs %}
+                                                {% for graph in graphs_list %}
                                                     <tr>
                                                         <td class="col-rankings">
                                                             <strong>{{ graph.graph_name }}</strong>&nbsp;
-                                                            {% if graph.type != 'Influencer' %}
-                                                                (Rank {{ graph.rank }})
-                                                            {% endif %}
+                                                            (
+                                                            {% for hit in graph.hits %}
+                                                                {% if loop.index > 1 %}, {% endif %}Rank {{ hit.rank }} {{ hit.type }}
+                                                            {% endfor %}
+                                                            )
                                                         </td>
                                                         <td>
                                                             {% call(item) ordered_list_string(graph.tweetershandles) %}

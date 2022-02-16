@@ -36,7 +36,7 @@ scanners: [Scanner] = [
 ]
 
 # The csv containing urls for the archived graphs
-with open('archived-files.csv', newline='') as csvfile:
+with open('full-archived-files.csv', newline='') as csvfile:
     fieldnames = ['graph', 'timestamp', 'archive_url']
     reader = csv.DictReader(csvfile, fieldnames=fieldnames)
     csv_data = {x['graph']: x for x in reader}

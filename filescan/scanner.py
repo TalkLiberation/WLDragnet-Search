@@ -114,7 +114,7 @@ class DomainScanner(Scanner):
         self.table_name = "ranked_domains"
         self.pattern = self.compile_pattern(
             r"Top\s+Domains\s+in\s+Tweet\s+in\s+(Entire Graph|G\d+):",
-            r"(?:[^[]+\[\d+]\s+([^<]+)</a>)?",
+            r"(?:(?![^[]+?Top)[^[]+?\[\d+]\s+([^<]+)</a>)?",
             10
         )
 
@@ -127,7 +127,7 @@ class HashtagScanner(Scanner):
         self.table_name = "ranked_hashtags"
         self.pattern = self.compile_pattern(
             r"Top\s+Hashtags\s+in\s+Tweet\s+in\s+(Entire Graph|G\d+):",
-            r"(?:[^[]+\[\d+]\n?\s*([^<]+)</a>)?",
+            r"(?:(?![^[]+?Top)[^[]+?\[\d+]\n?\s*([^<]+)</a>)?",
             10
         )
 
@@ -140,7 +140,7 @@ class WordScanner(Scanner):
         self.table_name = "ranked_words"
         self.pattern = self.compile_pattern(
             r"Top\s+Words\s+in\s+Tweet\s+in\s+(G\d+):",
-            r"(?:[^\[]+\[\d+]\n?\s*([^<]+)<)?",
+            r"(?:(?![^[]+?Top)[^[]+?\[\d+]\n?\s*([^<]+)<)?",
             10
         )
 
@@ -153,7 +153,7 @@ class WordPairScanner(Scanner):
         self.table_name = "ranked_word_pairs"
         self.pattern = self.compile_pattern(
             r"Top\s+Word\s+Pairs\s+in\s+Tweet\s+in\s+(Entire Graph|G\d+):",
-            r"(?:[^[]+\[\d+]\s*([^,]+),([^<]+))?",
+            r"(?:(?![^[]+?Top)[^[]+?\[\d+]\s*([^,]+),([^<]+))?",
             10
         )
 
@@ -195,7 +195,7 @@ class HandleScanner(Scanner):
         self.table_name = "ranked_handles"
         self.pattern = self.compile_pattern(
             r"Top\s+(Mentioned|Replied-To|Tweeters)\s+in\s+(Entire Graph|G\d+):",
-            r"(?:[^@]*@(\w{1,15}))?",
+            r"(?:(?![^@]+?Top)[^@]+?@(\w{1,15}))?",
             10
         )
 
@@ -229,7 +229,7 @@ class InfluencerScanner(Scanner):
         self.table_name = "ranked_handles"
         self.pattern = self.compile_pattern(
             r"Top(?:\s|\n)+Influencers:(?:\s|\n)+",
-            r"(?:[^@]*@(\w{1,15}))?",
+            r"(?:(?![^@]+?Top)[^@]+?@(\w{1,15}))?",
             10
         )
 
