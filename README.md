@@ -23,9 +23,9 @@ The WLDragnet Search is a Flask application that displays results generated from
 Users of the WLDragnet Search can look up their own Twitter accounts — or anyone else’s — without those searches being recorded by the application. Other privacy features include:
 
 * No cookies on the WLDragnet.com website 
-* No web trackers at all
-* Search requests (inputted user handles) are not stored
-* Reports generated via the tool are not stored (in-memory data structure store)
+* No web trackers
+* Search requests (inputted user handles) are not captured or stored
+* Reports generated via the tool are not captured or stored (in-memory data structure store)
 * No logging of browser, device or visitor information
 * Source links go to archived versions of the files — preventing the entities involved in the social media mass surveillance from tracking visitors
 * Hyperlinks to Twitter accounts in the custom reports lead to [Nitter](https://nitter.sethforprivacy.com) - a FOSS alternative Twitter front-end (hosted by [@SethForPrivacy](https://nitter.sethforprivacy.com/sethforprivacy))
