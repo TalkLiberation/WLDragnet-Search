@@ -18,6 +18,20 @@ This repository contains an application that complements investigative reporting
 
 The WLDragnet Search is a Flask application that displays results generated from the [WLDragnet files](https://talkliberation.com/wldragnet-repo). This repository also includes [utility scripts](filescan/README.md) for scraping the data and a DDL file for the required database structure.
 
+## Privacy and Security
+
+Users of the WLDragnet Search can look up their own Twitter accounts — or anyone else’s — without those searches being recorded by the application. Other privacy features include:
+
+* No cookies on the WLDragnet.com website 
+* No web trackers
+* Search requests (inputted user handles) are not captured or stored
+* Reports generated via the tool are not captured or stored (in-memory data structure store)
+* No logging of browser, device or visitor information
+* Source links go to archived versions of the files — preventing the entities involved in the social media mass surveillance from tracking visitors
+* Hyperlinks to Twitter accounts in the custom reports lead to [Nitter](https://nitter.sethforprivacy.com) - a FOSS alternative Twitter front-end (hosted by [@SethForPrivacy](https://nitter.sethforprivacy.com/sethforprivacy))
+
+The code has been penetration tested by top security experts and audited by founder of [Exodus Privacy](https://exodus-privacy.eu.org), Esther Onfroy (also of [Defensive Lab Agency](https://defensive-lab.agency)).
+
 ## Installation and Configuration
 
 ### Dependencies
