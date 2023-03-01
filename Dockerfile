@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:11.6-slim
 
 RUN apt-get update -y \
 && apt-get install -y python3-pip python3-dev libpq-dev wkhtmltopdf build-essential libpoppler-cpp-dev pkg-config \
