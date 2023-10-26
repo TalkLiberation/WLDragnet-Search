@@ -11,6 +11,6 @@ PyJWT==2.3.0
 PyPDF2==1.26.0
 python-dotenv==0.19.1
 redis==4.0.2
-Werkzeug==2.0.2
+Werkzeug==3.0.1
 wkhtmltopdf==0.2
 wrapt==1.13.3
